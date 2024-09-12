@@ -44,16 +44,17 @@ const SignIn = () => {
             mutation
               .mutateAsync(values)
               .then((data) => {
-                mutation.mutateAsync(values).then((data) => {
+                mutation.mutateAsync(values)
+                .then((data) => {
                   console.log(data);
                 }).catch((error) => {
-                  //console.log(error);
-                });
+                  console.log(error);
+                })
               })
               .catch((error) => {
-                //console.log(error);
+                console.log(error);
               });
-            router.push("/(tabs)/home")
+            // router.push("/(tabs)/home")
             }}
             validationSchema={validationSchema}
           >

@@ -3,7 +3,7 @@ import axios from "axios";
 const loginUser = async ({email, password}) => {
 
         const response = await axios.post(
-            "https://ripe-crabs-guess.loca.lt/api/users/login",
+            "http://10.0.2.2:8080/api/users/login", FormData,
             {
                 email,
                 password,
@@ -15,7 +15,7 @@ const loginUser = async ({email, password}) => {
 const registerUser = async ({email, password}) => {
     
     const response = await axios.post(
-        "https://ripe-crabs-guess.loca.lt/api/users/register",
+        "http://10.0.2.2:8080/api/users/register",
         {
             email,
             password,
